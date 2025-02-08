@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fundraise Up Demo</title>
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3GH36CCZK"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag(){dataLayer.push(arguments);}
+        gtag('js', new Date());
+        gtag('config', 'G-J3GH36CCZK');
+    </script>
+    <script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
+    .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
+    :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
+    j=d.createElement(s);j.async=!0;j.src='https://cdn.fundraiseup.com/widget/'+a;
+    t.parentNode.insertBefore(j,t);o.s=Date.now();o.v=4;o.h=w.location.href;o.l=[];
+    for(i=0;i<7;i++)o[l[i]]=o(l[i]);w[n]=o}
+    })(window,document,'script','FundraiseUp','AEMZUDUM');</script>
+</head>
+<body>
+
+    <h2>Click the button below to donate:</h2>
+
+    <div id="donate-button-container">
+        <a href="#XJKDHSTQ" style="display: inline-block; padding: 10px 20px; background-color: #4285F4; color: white; text-decoration: none; border-radius: 5px;">Donate</a>
+    </div>
+
+    <br>
+
+    <p>This is a demonstration of Fundraise Up integration. Clicking the "Donate" button will open a тестовый checkout.</p>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const donationButton = document.querySelector('a[href="#XJKDHSTQ"]');
+            if (donationButton) {
+                donationButton.addEventListener('click', function(event) {
+                    event.preventDefault();
+
+                    dataLayer.push({
+                        'event': 'checkout_opened'
+                    });
+
+                    FundraiseUp.XJKDHSTQ.call('checkout', {});
+
+
+                });
+
+                function simulateDonation() {
+                    dataLayer.push({
+                        'event': 'donation_made',
+                        'value': 700,
+                        'currency': 'USD'
+                    });
+                    alert('Имитация пожертвования на $700. Проверьте Google Analytics.');
+                }
+
+                setTimeout(simulateDonation, 5000);
+
+            }
+        });
+    </script>
+
+</body>
+</html>
