@@ -4,6 +4,15 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fundraise Up Demo</title>
+
+    <!-- Google Tag Manager -->
+    <script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+    new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+    j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+    'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+    })(window,document,'script','dataLayer','GTM-WWZ2X5Z9');</script>
+    <!-- End Google Tag Manager -->
+
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-J3GH36CCZK"></script>
     <script>
         window.dataLayer = window.dataLayer || [];
@@ -11,6 +20,7 @@
         gtag('js', new Date());
         gtag('config', 'G-J3GH36CCZK');
     </script>
+
     <script>(function(w,d,s,n,a){if(!w[n]){var l='call,catch,on,once,set,then,track'
     .split(','),i,o=function(n){return'function'==typeof n?o.l.push([arguments])&&o
     :function(){return o.l.push([n,arguments])&&o}},t=d.getElementsByTagName(s)[0],
@@ -21,6 +31,11 @@
 </head>
 <body>
 
+    <!-- Google Tag Manager (noscript) -->
+    <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-WWZ2X5Z9"
+    height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+    <!-- End Google Tag Manager (noscript) -->
+
     <h2>Click the button below to donate:</h2>
 
     <div id="donate-button-container">
@@ -28,6 +43,8 @@
     </div>
 
     <br>
+
+    <p>This is a demonstration of Fundraise Up integration. Clicking the "Donate" button will open a тестовый checkout.</p>
 
     <script>
         document.addEventListener('DOMContentLoaded', function() {
@@ -51,7 +68,7 @@
                         'value': 700,
                         'currency': 'USD'
                     });
-                    alert('Donation imitation $700. Check Google Analytics.');
+                    alert('Имитация пожертвования на $700. Проверьте Google Analytics.');
                 }
 
                 setTimeout(simulateDonation, 5000);
